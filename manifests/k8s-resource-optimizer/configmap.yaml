@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-resource-optimizer-cm
+  namespace: ops-system
+data:
+  SLACK_CHANNEL: "k8s-resource-optimizer"
+  SLACK_TOKEN: abcd
+  PROMETHEUS_URL: "https://metric-dev.mustit.xyz/"
