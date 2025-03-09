@@ -1,0 +1,5 @@
+# 필수 라이브러리 목록
+requests==2.31.0              # HTTP 요청 라이브러리
+prometheus-api-client==0.5.2  # Prometheus 데이터 수집
+python-dotenv==1.0.1          # 환경 변수 관리
+slack_sdk==3.34.0

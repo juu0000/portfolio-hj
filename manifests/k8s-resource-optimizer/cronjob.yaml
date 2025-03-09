@@ -42,11 +42,6 @@ spec:
                     secretKeyRef:
                       name: k8s-resource-optimizer-sc
                       key: SLACK_TOKEN
-                # - name: SLACK_TOKEN
-                #   valueFrom:
-                #     configMapKeyRef:
-                #       name: k8s-resource-optimizer-cm
-                #       key: SLACK_TOKEN
               # resources:
               #   requests:
               #     memory: '200Mi'
