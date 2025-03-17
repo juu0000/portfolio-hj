@@ -25,15 +25,13 @@ def fetch_cpu_usage(namespace, record=False):
             """
 
         print(f"[INFO] PromQL 실행 중... (Namespace: {namespace}, Record: {record})")
-        # 수집된 값
-        # @metric label값
-        # @value 날짜, cpu사용률
+
         data = prom.custom_query(query=query)
 
         recommendation = []
         for item in data:
             container_name = item["metric"].get("container","unknown_container")
-            cpu_value = float(item["value"][1])
+            cpu_value = round(float(item["value"][1]), 3)
 
             recommendation.append({
                 "namespace": namespace,
@@ -55,36 +53,38 @@ def fetch_memory_usage(namespace, record=False):
     try:
         if not record:
             query = f"""
-            quantile_over_time(
+              quantile_over_time(
                 0.95, 
                 max by(namespace, container) (
-                    rate(container_memory_working_set_bytes{{
+                    container_memory_working_set_bytes{{
                         namespace!="kube-system",
                         namespace="{namespace}"
-                    }}[5m]))
-            [1w:5m])
+                    }}
+                )[1w:5m]
+              )
             """
         else:
             query = f"""
                 record:container_memory_working_set_bytes:q95_rate_1m{{
                     namespace={namespace}
+                }}
             """
         print(f"[INFO] PromQL 실행 중... (Namespace: {namespace}, Record: {record})")
-        # 수집된 값
-        # @metric label값
-        # @value 날짜, cpu사용률
+
         data = prom.custom_query(query=query)
 
         recommendation = []
         for item in data:
             container_name = item["metric"].get("container","unknown_container")
-            memory_value = float(item["value"][1]) / (1024 * 1024) # Byte -> MB 변환
+            memory_value = round(float(item["value"][1]) / (1024 * 1024),4) # Byte -> MB 변환
 
             recommendation.append({
                 "namespace": namespace,
                 "container": container_name,
                 "memory_value": memory_value
             })
+
+        print(f"[INFO] {len(recommendation)}개의 Memory 사용량 값을 가져왔습니다.")
 
         return recommendation
     except requests.exceptions.HTTPError as e:

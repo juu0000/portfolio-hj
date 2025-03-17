@@ -26,7 +26,7 @@ spec:
                 - "python3 run_recommender.py --n $NAMESPACE"
               env:
                 - name: NAMESPACE
-                  value: 'argocd'
+                  value: 'argocd jenkins'
                 - name: SLACK_CHANNEL
                   valueFrom:
                     configMapKeyRef:

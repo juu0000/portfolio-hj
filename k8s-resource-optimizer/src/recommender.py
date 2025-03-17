@@ -43,6 +43,7 @@ def memory_recommendation(memory_usage, safety_margin=1.15, min_request=50, prec
     container_name = item["container"]
     memory_value = item["memory_value"]
     
+    # request.memory 값 계산
     memory_recommendation_value = max(memory_value * safety_margin, min_request)
     memory_recommendation_value = round(memory_recommendation_value, precision)
     

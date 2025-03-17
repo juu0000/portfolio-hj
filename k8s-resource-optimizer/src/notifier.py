@@ -11,6 +11,8 @@ def send_slack_notification(namespace, cpu_dict, mem_dict):
 
   client = WebClient(token=SLACK_TOKEN)
 
+  # 합집합 |
+  # cpu_dict과 mem_dict에서 일치하는 키를 합침
   all_keys = set(cpu_dict.keys()) | set(mem_dict.keys())
 
   recommendations = []
@@ -37,7 +39,7 @@ def send_slack_notification(namespace, cpu_dict, mem_dict):
     }
   }]
   response = client.chat_postMessage(channel=SLACK_CHANNEL, blocks=blocks)
-
+# 한번에 보낼 Pod 수 제한 (최대 20개)
   chunk_size = 20
   for i in range(0, len(recommendations), chunk_size):
     container_list = recommendations[i:i+chunk_size]
