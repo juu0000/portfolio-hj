@@ -1,0 +1,129 @@
+{
+  "_links": {
+      "self": {
+          "href": "/job/job-02/2/wfapi/describe"
+      }
+  },
+  "id": "2",
+  "name": "#2",
+  "status": "SUCCESS",
+  "startTimeMillis": 1741499886162,
+  "endTimeMillis": 1741500218112,
+  "durationMillis": 331950,
+  "queueDurationMillis": 7,
+  "pauseDurationMillis": 0,
+  "stages": [
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/6/wfapi/describe"
+              }
+          },
+          "id": "6",
+          "name": "Declarative: Checkout SCM",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741499903735,
+          "durationMillis": 9929,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/13/wfapi/describe"
+              }
+          },
+          "id": "13",
+          "name": "Clone Github",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741499913732,
+          "durationMillis": 30575,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/23/wfapi/describe"
+              }
+          },
+          "id": "23",
+          "name": "진행중-1",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741499944327,
+          "durationMillis": 60561,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/33/wfapi/describe"
+              }
+          },
+          "id": "33",
+          "name": "진행중-2",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741500004908,
+          "durationMillis": 30653,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/43/wfapi/describe"
+              }
+          },
+          "id": "43",
+          "name": "진행중-3",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741500035575,
+          "durationMillis": 60683,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/53/wfapi/describe"
+              }
+          },
+          "id": "53",
+          "name": "진행중-4",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741500096280,
+          "durationMillis": 30483,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/63/wfapi/describe"
+              }
+          },
+          "id": "63",
+          "name": "진행중-5",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741500126794,
+          "durationMillis": 60497,
+          "pauseDurationMillis": 0
+      },
+      {
+          "_links": {
+              "self": {
+                  "href": "/job/job-02/2/execution/node/73/wfapi/describe"
+              }
+          },
+          "id": "73",
+          "name": "진행중-6",
+          "execNode": "",
+          "status": "SUCCESS",
+          "startTimeMillis": 1741500187308,
+          "durationMillis": 30612,
+          "pauseDurationMillis": 0
+      }
+  ]
+}

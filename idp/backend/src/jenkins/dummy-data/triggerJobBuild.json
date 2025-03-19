@@ -1,0 +1,214 @@
+{
+  "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob",
+  "actions": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+          "_class": "org.jenkinsci.plugins.displayurlapi.actions.JobDisplayAction"
+      },
+      {},
+      {},
+      {},
+      {},
+      {
+          "_class": "com.cloudbees.plugins.credentials.ViewCredentialsAction"
+      }
+  ],
+  "description": "",
+  "displayName": "job-test-01",
+  "displayNameOrNull": null,
+  "fullDisplayName": "job-test-01",
+  "fullName": "job-test-01",
+  "name": "job-test-01",
+  "url": "https://jenkins-test.example.xyz/job/job-test-01/",
+  "buildable": true,
+  "builds": [
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 25,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/25/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 24,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/24/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 23,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/23/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 22,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/22/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 21,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/21/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 20,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/20/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 19,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/19/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 18,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/18/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 17,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/17/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 16,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/16/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 15,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/15/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 14,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/14/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 13,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/13/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 12,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/12/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 11,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/11/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 10,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/10/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 9,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/9/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 8,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/8/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 7,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/7/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 6,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/6/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 5,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/5/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 4,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/4/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 3,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/3/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 2,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/2/"
+      },
+      {
+          "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+          "number": 1,
+          "url": "https://jenkins-test.example.xyz/job/job-test-01/1/"
+      }
+  ],
+  "color": "blue",
+  "firstBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 1,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/1/"
+  },
+  "healthReport": [
+      {
+          "description": "Build stability: No recent builds failed.",
+          "iconClassName": "icon-health-80plus",
+          "iconUrl": "health-80plus.png",
+          "score": 100
+      }
+  ],
+  "inQueue": false,
+  "keepDependencies": false,
+  "lastBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 25,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/25/"
+  },
+  "lastCompletedBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 25,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/25/"
+  },
+  "lastFailedBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 2,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/2/"
+  },
+  "lastStableBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 25,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/25/"
+  },
+  "lastSuccessfulBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 25,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/25/"
+  },
+  "lastUnstableBuild": null,
+  "lastUnsuccessfulBuild": {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "number": 2,
+      "url": "https://jenkins-test.example.xyz/job/job-test-01/2/"
+  },
+  "nextBuildNumber": 26,
+  "property": [
+      {
+          "_class": "hudson.plugins.jira.JiraProjectProperty"
+      }
+  ],
+  "queueItem": null,
+  "concurrentBuild": true,
+  "resumeBlocked": false
+}

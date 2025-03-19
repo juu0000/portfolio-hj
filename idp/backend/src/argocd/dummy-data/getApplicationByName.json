@@ -1,0 +1,244 @@
+{
+  "metadata": {
+      "name": "nginx",
+      "namespace": "argocd",
+      "uid": "26d40d1b-38a5-49d0-a298-7901488e4160",
+      "resourceVersion": "703248",
+      "generation": 1554,
+      "creationTimestamp": "2025-03-11T12:24:09Z",
+      "managedFields": [
+          {
+              "manager": "argocd-server",
+              "operation": "Update",
+              "apiVersion": "argoproj.io/v1alpha1",
+              "time": "2025-03-15T13:27:35Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                  "f:spec": {
+                      ".": {},
+                      "f:destination": {
+                          ".": {},
+                          "f:namespace": {},
+                          "f:server": {}
+                      },
+                      "f:project": {},
+                      "f:source": {
+                          ".": {},
+                          "f:path": {},
+                          "f:repoURL": {},
+                          "f:targetRevision": {}
+                      }
+                  },
+                  "f:status": {
+                      ".": {},
+                      "f:health": {},
+                      "f:summary": {},
+                      "f:sync": {
+                          ".": {},
+                          "f:comparedTo": {
+                              ".": {},
+                              "f:destination": {},
+                              "f:source": {}
+                          }
+                      }
+                  }
+              }
+          },
+          {
+              "manager": "argocd-application-controller",
+              "operation": "Update",
+              "apiVersion": "argoproj.io/v1alpha1",
+              "time": "2025-03-17T10:07:38Z",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": {
+                  "f:status": {
+                      "f:controllerNamespace": {},
+                      "f:health": {
+                          "f:status": {}
+                      },
+                      "f:history": {},
+                      "f:operationState": {
+                          ".": {},
+                          "f:finishedAt": {},
+                          "f:message": {},
+                          "f:operation": {
+                              ".": {},
+                              "f:initiatedBy": {
+                                  ".": {},
+                                  "f:username": {}
+                              },
+                              "f:retry": {},
+                              "f:sync": {
+                                  ".": {},
+                                  "f:revision": {}
+                              }
+                          },
+                          "f:phase": {},
+                          "f:startedAt": {},
+                          "f:syncResult": {
+                              ".": {},
+                              "f:resources": {},
+                              "f:revision": {},
+                              "f:source": {
+                                  ".": {},
+                                  "f:path": {},
+                                  "f:repoURL": {},
+                                  "f:targetRevision": {}
+                              }
+                          }
+                      },
+                      "f:reconciledAt": {},
+                      "f:resources": {},
+                      "f:sourceType": {},
+                      "f:summary": {
+                          "f:images": {}
+                      },
+                      "f:sync": {
+                          "f:comparedTo": {
+                              "f:destination": {
+                                  "f:namespace": {},
+                                  "f:server": {}
+                              },
+                              "f:source": {
+                                  "f:path": {},
+                                  "f:repoURL": {},
+                                  "f:targetRevision": {}
+                              }
+                          },
+                          "f:revision": {},
+                          "f:status": {}
+                      }
+                  }
+              }
+          }
+      ]
+  },
+  "spec": {
+      "source": {
+          "repoURL": "https://github.com/juu0000/jenkins-shared-library.git",
+          "path": "manifests/test",
+          "targetRevision": "HEAD"
+      },
+      "destination": {
+          "server": "https://kubernetes.default.svc",
+          "namespace": "testz"
+      },
+      "project": "default"
+  },
+  "status": {
+      "resources": [
+          {
+              "group": "apps",
+              "version": "v1",
+              "kind": "Deployment",
+              "namespace": "test",
+              "name": "nginx-deployment",
+              "status": "OutOfSync",
+              "health": {
+                  "status": "Healthy"
+              },
+              "requiresPruning": true
+          },
+          {
+              "group": "apps",
+              "version": "v1",
+              "kind": "Deployment",
+              "namespace": "testz",
+              "name": "nginx-deployment",
+              "status": "OutOfSync",
+              "health": {
+                  "status": "Missing"
+              }
+          }
+      ],
+      "sync": {
+          "status": "OutOfSync",
+          "comparedTo": {
+              "source": {
+                  "repoURL": "https://github.com/juu0000/jenkins-shared-library.git",
+                  "path": "manifests/test",
+                  "targetRevision": "HEAD"
+              },
+              "destination": {
+                  "server": "https://kubernetes.default.svc",
+                  "namespace": "testz"
+              }
+          },
+          "revision": "6d164eac783fb622b46a60431823d8ecb52b0281"
+      },
+      "health": {
+          "status": "Missing"
+      },
+      "history": [
+          {
+              "revision": "6d164eac783fb622b46a60431823d8ecb52b0281",
+              "deployedAt": "2025-03-11T12:24:59Z",
+              "id": 0,
+              "source": {
+                  "repoURL": "https://github.com/juu0000/jenkins-shared-library.git",
+                  "path": "manifests/test",
+                  "targetRevision": "HEAD"
+              },
+              "deployStartedAt": "2025-03-11T12:24:57Z",
+              "initiatedBy": {
+                  "username": "admin"
+              }
+          }
+      ],
+      "reconciledAt": "2025-03-17T10:07:38Z",
+      "operationState": {
+          "operation": {
+              "sync": {
+                  "revision": "6d164eac783fb622b46a60431823d8ecb52b0281"
+              },
+              "initiatedBy": {
+                  "username": "admin"
+              },
+              "retry": {}
+          },
+          "phase": "Failed",
+          "message": "one or more objects failed to apply, reason: namespaces \"testz\" not found",
+          "syncResult": {
+              "resources": [
+                  {
+                      "group": "apps",
+                      "version": "v1",
+                      "kind": "Deployment",
+                      "namespace": "test",
+                      "name": "nginx-deployment",
+                      "status": "PruneSkipped",
+                      "message": "ignored (requires pruning)",
+                      "hookPhase": "Succeeded",
+                      "syncPhase": "Sync"
+                  },
+                  {
+                      "group": "apps",
+                      "version": "v1",
+                      "kind": "Deployment",
+                      "namespace": "testz",
+                      "name": "nginx-deployment",
+                      "status": "SyncFailed",
+                      "message": "namespaces \"testz\" not found",
+                      "hookPhase": "Failed",
+                      "syncPhase": "Sync"
+                  }
+              ],
+              "revision": "6d164eac783fb622b46a60431823d8ecb52b0281",
+              "source": {
+                  "repoURL": "https://github.com/juu0000/jenkins-shared-library.git",
+                  "path": "manifests/test",
+                  "targetRevision": "HEAD"
+              }
+          },
+          "startedAt": "2025-03-15T13:27:36Z",
+          "finishedAt": "2025-03-15T13:27:37Z"
+      },
+      "sourceType": "Directory",
+      "summary": {
+          "images": [
+              "nginx:1.14.2"
+          ]
+      },
+      "controllerNamespace": "argocd"
+  }
+}
