@@ -1,0 +1,323 @@
+[
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/9/wfapi/describe"
+          }
+      },
+      "id": "9",
+      "name": "#9",
+      "status": "SUCCESS",
+      "startTimeMillis": 1742045242652,
+      "endTimeMillis": 1742045267910,
+      "durationMillis": 25258,
+      "queueDurationMillis": 8,
+      "pauseDurationMillis": 0,
+      "stages": [
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/9/execution/node/6/wfapi/describe"
+                  }
+              },
+              "id": "6",
+              "name": "Declarative: Checkout SCM",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742045255855,
+              "durationMillis": 11451,
+              "pauseDurationMillis": 0
+          },
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/9/execution/node/13/wfapi/describe"
+                  }
+              },
+              "id": "13",
+              "name": "Clone Github",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742045267359,
+              "durationMillis": 484,
+              "pauseDurationMillis": 0
+          }
+      ]
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/8/wfapi/describe"
+          }
+      },
+      "id": "8",
+      "name": "#8",
+      "status": "SUCCESS",
+      "startTimeMillis": 1742044358723,
+      "endTimeMillis": 1742044385735,
+      "durationMillis": 27012,
+      "queueDurationMillis": 21,
+      "pauseDurationMillis": 0,
+      "stages": [
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/8/execution/node/6/wfapi/describe"
+                  }
+              },
+              "id": "6",
+              "name": "Declarative: Checkout SCM",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742044375182,
+              "durationMillis": 9882,
+              "pauseDurationMillis": 0
+          },
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/8/execution/node/13/wfapi/describe"
+                  }
+              },
+              "id": "13",
+              "name": "Clone Github",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742044385109,
+              "durationMillis": 546,
+              "pauseDurationMillis": 0
+          }
+      ]
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/7/wfapi/describe"
+          }
+      },
+      "id": "7",
+      "name": "#7",
+      "status": "SUCCESS",
+      "startTimeMillis": 1742044283550,
+      "endTimeMillis": 1742044315948,
+      "durationMillis": 32398,
+      "queueDurationMillis": 9,
+      "pauseDurationMillis": 0,
+      "stages": [
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/7/execution/node/6/wfapi/describe"
+                  }
+              },
+              "id": "6",
+              "name": "Declarative: Checkout SCM",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742044302821,
+              "durationMillis": 12196,
+              "pauseDurationMillis": 0
+          },
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/7/execution/node/13/wfapi/describe"
+                  }
+              },
+              "id": "13",
+              "name": "Clone Github",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742044315053,
+              "durationMillis": 581,
+              "pauseDurationMillis": 0
+          }
+      ]
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/6/wfapi/describe"
+          }
+      },
+      "id": "6",
+      "name": "#6",
+      "status": "SUCCESS",
+      "startTimeMillis": 1742044082687,
+      "endTimeMillis": 1742044105572,
+      "durationMillis": 22885,
+      "queueDurationMillis": 11,
+      "pauseDurationMillis": 0,
+      "stages": [
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/6/execution/node/6/wfapi/describe"
+                  }
+              },
+              "id": "6",
+              "name": "Declarative: Checkout SCM",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742044095694,
+              "durationMillis": 9110,
+              "pauseDurationMillis": 0
+          },
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/6/execution/node/13/wfapi/describe"
+                  }
+              },
+              "id": "13",
+              "name": "Clone Github",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742044104859,
+              "durationMillis": 627,
+              "pauseDurationMillis": 0
+          }
+      ]
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/5/wfapi/describe"
+          },
+          "changesets": {
+              "href": "/job/job-01/5/wfapi/changesets"
+          }
+      },
+      "id": "5",
+      "name": "#5",
+      "status": "SUCCESS",
+      "startTimeMillis": 1742043922472,
+      "endTimeMillis": 1742043986873,
+      "durationMillis": 64401,
+      "queueDurationMillis": 14,
+      "pauseDurationMillis": 0,
+      "stages": [
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/5/execution/node/6/wfapi/describe"
+                  }
+              },
+              "id": "6",
+              "name": "Declarative: Checkout SCM",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742043971238,
+              "durationMillis": 13463,
+              "pauseDurationMillis": 0
+          },
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/5/execution/node/13/wfapi/describe"
+                  }
+              },
+              "id": "13",
+              "name": "Clone Github",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1742043985026,
+              "durationMillis": 1226,
+              "pauseDurationMillis": 0
+          }
+      ]
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/4/wfapi/describe"
+          }
+      },
+      "id": "4",
+      "name": "#4",
+      "status": "SUCCESS",
+      "startTimeMillis": 1741490763815,
+      "endTimeMillis": 1741490831565,
+      "durationMillis": 67750,
+      "queueDurationMillis": 19,
+      "pauseDurationMillis": 0,
+      "stages": [
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/4/execution/node/6/wfapi/describe"
+                  }
+              },
+              "id": "6",
+              "name": "Declarative: Checkout SCM",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1741490818975,
+              "durationMillis": 11278,
+              "pauseDurationMillis": 0
+          },
+          {
+              "_links": {
+                  "self": {
+                      "href": "/job/job-01/4/execution/node/13/wfapi/describe"
+                  }
+              },
+              "id": "13",
+              "name": "Clone Github",
+              "execNode": "",
+              "status": "SUCCESS",
+              "startTimeMillis": 1741490830403,
+              "durationMillis": 910,
+              "pauseDurationMillis": 0
+          }
+      ]
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/3/wfapi/describe"
+          }
+      },
+      "id": "3",
+      "name": "#3",
+      "status": "NOT_EXECUTED",
+      "startTimeMillis": 1741490675223,
+      "endTimeMillis": 1741490678317,
+      "durationMillis": 3094,
+      "queueDurationMillis": 11,
+      "pauseDurationMillis": 0,
+      "stages": []
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/2/wfapi/describe"
+          }
+      },
+      "id": "2",
+      "name": "#2",
+      "status": "NOT_EXECUTED",
+      "startTimeMillis": 1741490628698,
+      "endTimeMillis": 1741490629733,
+      "durationMillis": 1035,
+      "queueDurationMillis": 13,
+      "pauseDurationMillis": 0,
+      "stages": []
+  },
+  {
+      "_links": {
+          "self": {
+              "href": "/job/job-01/1/wfapi/describe"
+          }
+      },
+      "id": "1",
+      "name": "#1",
+      "status": "NOT_EXECUTED",
+      "startTimeMillis": 1741490488060,
+      "endTimeMillis": 1741490492603,
+      "durationMillis": 4543,
+      "queueDurationMillis": 8,
+      "pauseDurationMillis": 0,
+      "stages": []
+  }
+]

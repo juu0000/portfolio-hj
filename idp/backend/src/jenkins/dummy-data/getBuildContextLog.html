@@ -1,0 +1,212 @@
+Started by user Jenkins Admin
+Obtained jenkins_pipelines/athena_dev/test-02.Jenkinsfile from git https://github.com/juu0000/jenkins-shared-library.git
+Loading library jenkins-libraries@main:jenkins_libraries/
+Attempting to resolve main from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials 
+ > git ls-remote -h -- https://github.com/juu0000/jenkins-shared-library.git # timeout=10
+Found match: refs/heads/main revision 2a6d4e2cefaab9f5355cbfa28ab5ba2fd47fc7a1
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential github
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/job-02@libs/1c084843555c80b6003cf4b32d47c44a812a326b3dbfc0dd131fbcef1b2c8ba3/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/juu0000/jenkins-shared-library.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://github.com/juu0000/jenkins-shared-library.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials 
+ > git fetch --no-tags --force --progress -- https://github.com/juu0000/jenkins-shared-library.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 2a6d4e2cefaab9f5355cbfa28ab5ba2fd47fc7a1 (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2a6d4e2cefaab9f5355cbfa28ab5ba2fd47fc7a1 # timeout=10
+Commit message: "test-job-01"
+ > git rev-list --no-walk 2a6d4e2cefaab9f5355cbfa28ab5ba2fd47fc7a1 # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Agent default-zfxdz is provisioned from template default
+---
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  annotations:
+    kubernetes.jenkins.io/last-refresh: "1741502108622"
+  labels:
+    jenkins/jenkins-jenkins-agent: "true"
+    jenkins/label-digest: "500b4f18aee87616849e4f4c2435020898e34aa0"
+    jenkins/label: "jenkins-jenkins-agent"
+    kubernetes.jenkins.io/controller: "http___jenkins_jenkins_svc_cluster_local_8080x"
+  name: "default-zfxdz"
+  namespace: "jenkins"
+spec:
+  containers:
+  - args:
+    - "********"
+    - "default-zfxdz"
+    env:
+    - name: "JENKINS_SECRET"
+      value: "********"
+    - name: "JENKINS_TUNNEL"
+      value: "jenkins-agent.jenkins.svc.cluster.local:50000"
+    - name: "JENKINS_AGENT_NAME"
+      value: "default-zfxdz"
+    - name: "REMOTING_OPTS"
+      value: "-noReconnectAfter 1d"
+    - name: "JENKINS_NAME"
+      value: "default-zfxdz"
+    - name: "JENKINS_AGENT_WORKDIR"
+      value: "/home/jenkins/agent"
+    - name: "JENKINS_URL"
+      value: "http://jenkins.jenkins.svc.cluster.local:8080/"
+    image: "jenkins/inbound-agent:3283.v92c105e0f819-8"
+    imagePullPolicy: "IfNotPresent"
+    name: "jnlp"
+    resources:
+      limits:
+        memory: "512Mi"
+        cpu: "512m"
+      requests:
+        memory: "512Mi"
+        cpu: "512m"
+    tty: false
+    volumeMounts:
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
+    workingDir: "/home/jenkins/agent"
+  nodeSelector:
+    kubernetes.io/os: "linux"
+  restartPolicy: "Never"
+  serviceAccountName: "default"
+  volumes:
+  - emptyDir:
+      medium: ""
+    name: "workspace-volume"
+
+Running on default-zfxdz in /home/jenkins/agent/workspace/job-02
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential github
+Cloning the remote Git repository
+Cloning repository https://github.com/juu0000/jenkins-shared-library.git
+ > git init /home/jenkins/agent/workspace/job-02 # timeout=10
+Fetching upstream changes from https://github.com/juu0000/jenkins-shared-library.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/juu0000/jenkins-shared-library.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/juu0000/jenkins-shared-library.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision 2a6d4e2cefaab9f5355cbfa28ab5ba2fd47fc7a1 (refs/remotes/origin/main)
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2a6d4e2cefaab9f5355cbfa28ab5ba2fd47fc7a1 # timeout=10
+Commit message: "test-job-01"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clone Github)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo test
+test
+[Pipeline] sleep
+Sleeping for 30 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (진행중-1)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo 진행1
+진행1
+[Pipeline] sleep
+Sleeping for 1 min 0 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (진행중-2)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo 진행2
+진행2
+[Pipeline] sleep
+Sleeping for 30 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (진행중-3)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo 진행3
+진행3
+[Pipeline] sleep
+Sleeping for 1 min 0 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (진행중-4)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo 진행4
+진행4
+[Pipeline] sleep
+Sleeping for 30 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (진행중-5)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo 진행30
+진행30
+[Pipeline] sleep
+Sleeping for 1 min 0 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (진행중-6)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
++ echo 진행6
+진행6
+[Pipeline] sleep
+Sleeping for 30 sec
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

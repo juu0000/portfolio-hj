@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "metadata": {
+        "name": "auth-api"
+      },
+      "spec": {
+        "project": "default"
+      },
+      "status": {
+        "health": {
+          "status": "Missing"
+        },
+        "sync": {
+          "status": "OutOfSync"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "name": "home-api"
+      },
+      "spec": {
+        "project": "default"
+      },
+      "status": {
+        "health": {
+          "status": "Healthy"
+        },
+        "sync": {
+          "status": "Synced"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "name": "legacy-api"
+      },
+      "spec": {
+        "project": "default"
+      },
+      "status": {
+        "health": {
+          "status": "Missing"
+        },
+        "sync": {
+          "status": "OutOfSync"
+        }
+      }
+    }
+  ]
+}

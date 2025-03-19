@@ -1,0 +1,360 @@
+[
+    {
+        "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob",
+        "name": "auth-api",
+        "color": "blue",
+        "property": [
+            {
+                "_class": "hudson.plugins.jira.JiraProjectProperty"
+            },
+            {
+                "_class": "hudson.security.AuthorizationMatrixProperty"
+            },
+            {
+                "_class": "hudson.model.ParametersDefinitionProperty",
+                "parameterDefinitions": [
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "auth-api"
+                        },
+                        "name": "APP_NAME"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "Jenkins-Jira"
+                        },
+                        "name": "REPO_NAME_YAML"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "auth-api"
+                        },
+                        "name": "REPO_NAME"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "dev"
+                        },
+                        "name": "BRANCH"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "dev"
+                        },
+                        "name": "ENVIRONMENT"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "npm"
+                        },
+                        "name": "BUILD_TOOL"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "."
+                        },
+                        "name": "DOCKERFILE_PATH"
+                    },
+                    {
+                        "_class": "hudson.model.TextParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.TextParameterValue",
+                            "value": "rm -rf ./dist\nnpm i --slient\nnpm run build"
+                        },
+                        "name": "NPM_COMMAND"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": ""
+                        },
+                        "name": "BUILD_PATH"
+                    }
+                ]
+            },
+            {
+                "_class": "org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty"
+            }
+        ],
+        "hasParameters": true,
+        "parameterDefinitions": [
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "auth-api"
+                },
+                "name": "APP_NAME"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "Jenkins-Jira"
+                },
+                "name": "REPO_NAME_YAML"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "auth-api"
+                },
+                "name": "REPO_NAME"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "dev"
+                },
+                "name": "BRANCH"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "dev"
+                },
+                "name": "ENVIRONMENT"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "npm"
+                },
+                "name": "BUILD_TOOL"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "."
+                },
+                "name": "DOCKERFILE_PATH"
+            },
+            {
+                "_class": "hudson.model.TextParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.TextParameterValue",
+                    "value": "rm -rf ./dist\nnpm i --slient\nnpm run build"
+                },
+                "name": "NPM_COMMAND"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": ""
+                },
+                "name": "BUILD_PATH"
+            }
+        ],
+        "lastSuccessfulBuild": {
+            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+            "duration": 65425,
+            "number": 1,
+            "result": "SUCCESS",
+            "timestamp": 1739499282752
+        },
+        "lastFailedBuild": null
+    },
+    {
+        "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob",
+        "name": "Auto Env",
+        "color": "red",
+        "property": [
+            {
+                "_class": "hudson.plugins.jira.JiraProjectProperty"
+            },
+            {
+                "_class": "hudson.model.ParametersDefinitionProperty",
+                "parameterDefinitions": [
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": ""
+                        },
+                        "name": "NAMESPACE"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": ""
+                        },
+                        "name": "RESOURCENAME"
+                    },
+                    {
+                        "_class": "hudson.model.ChoiceParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "cronjob"
+                        },
+                        "name": "RESOURCETYPE",
+                        "choices": [
+                            "cronjob",
+                            "deployment",
+                            "rollouts"
+                        ]
+                    },
+                    {
+                        "_class": "hudson.model.ChoiceParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "delete"
+                        },
+                        "name": "OPERATIONTYPE",
+                        "choices": [
+                            "delete",
+                            "add",
+                            "changeKey",
+                            "changeValue"
+                        ]
+                    },
+                    {
+                        "_class": "org.biouno.unochoice.CascadeChoiceParameter",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "오류 발생"
+                        },
+                        "name": "ENVNAME"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": ""
+                        },
+                        "name": "KEYNAME"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": ""
+                        },
+                        "name": "VALUENAME"
+                    },
+                    {
+                        "_class": "hudson.model.StringParameterDefinition",
+                        "defaultParameterValue": {
+                            "_class": "hudson.model.StringParameterValue",
+                            "value": "Jenkins-Jira"
+                        },
+                        "name": "REPONAME"
+                    }
+                ]
+            }
+        ],
+        "hasParameters": true,
+        "parameterDefinitions": [
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": ""
+                },
+                "name": "NAMESPACE"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": ""
+                },
+                "name": "RESOURCENAME"
+            },
+            {
+                "_class": "hudson.model.ChoiceParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "cronjob"
+                },
+                "name": "RESOURCETYPE",
+                "choices": [
+                    "cronjob",
+                    "deployment",
+                    "rollouts"
+                ]
+            },
+            {
+                "_class": "hudson.model.ChoiceParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "delete"
+                },
+                "name": "OPERATIONTYPE",
+                "choices": [
+                    "delete",
+                    "add",
+                    "changeKey",
+                    "changeValue"
+                ]
+            },
+            {
+                "_class": "org.biouno.unochoice.CascadeChoiceParameter",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "오류 발생"
+                },
+                "name": "ENVNAME"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": ""
+                },
+                "name": "KEYNAME"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": ""
+                },
+                "name": "VALUENAME"
+            },
+            {
+                "_class": "hudson.model.StringParameterDefinition",
+                "defaultParameterValue": {
+                    "_class": "hudson.model.StringParameterValue",
+                    "value": "Jenkins-Jira"
+                },
+                "name": "REPONAME"
+            }
+        ],
+        "lastSuccessfulBuild": {
+            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+            "duration": 24168,
+            "number": 22,
+            "result": "SUCCESS",
+            "timestamp": 1729848041281
+        },
+        "lastFailedBuild": {
+            "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+            "duration": 19260,
+            "number": 24,
+            "result": "FAILURE",
+            "timestamp": 1730080718145
+        }
+    }
+]

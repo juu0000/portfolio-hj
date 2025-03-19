@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: idp-hj-backend-cm
+  namespace: ops-system
+data:
+  JENKINS_URL: ""
+  ARGOCD_URL: ""
