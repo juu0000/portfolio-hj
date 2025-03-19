@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: idp-hj-frontend
+  namespace: ops-system
+  labels:
+    app: idp-hj-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: idp-hj-frontend
+  template:
+    metadata:
+      labels:
+        app: idp-hj-frontend
+    spec:
+      containers:
+      - name: idp-hj-frontend
+        image: docconman/idp-hj-frontend:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            memory: "256Mi"
+        env:
+          - name: NODE_ENV
+            value: 'production'
+          - name: REACT_APP_BACKEND_URL
+            value: 'http://backend.com'
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5

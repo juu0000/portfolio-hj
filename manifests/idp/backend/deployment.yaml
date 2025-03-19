@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: idp-hj-backend
+  labels:
+    app: idp-hj-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: idp-hj-backend
+  template:
+    metadata:
+      labels:
+        app: idp-hj-backend
+    spec:
+      containers:
+      - name: idp-hj-backend
+        image: docconman/idp-hj-backend:latest
+        ports:
+        - containerPort: 3030
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
+          limits:
+            memory: "256Mi"
+        env:
+          - name: DEMO_MODE
+            value: 'true'
+          - name: PROTOCOL
+            value: 'http'
+          - name: JENKINS_URL
+            valueFrom:
+              configMapKeyRef:
+                name: idp-hj-backend-cm
+                key: JENKINS_URL
+          - name: ARGOCD_URL
+            valueFrom:
+              configMapKeyRef:
+                name: idp-hj-backend-cm
+                key: ARGOCD_URL
+          - name: JENKINS_USER
+            valueFrom:
+              secretKeyRef:
+                name: idp-hj-backend-sc
+                key: JENKINS_USER
+          - name: ARGOCD_USER
+            valueFrom:
+              secretKeyRef:
+                name: idp-hj-backend-sc
+                key: ARGOCD_USER
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3030
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3030
+          initialDelaySeconds: 5
+          periodSeconds: 5
