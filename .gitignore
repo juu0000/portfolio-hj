@@ -1,4 +1,10 @@
 .env
 .env.local
 
+#python
 __pycache__
+
+
+#node
+dist
+node_modules
