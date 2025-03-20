@@ -126,3 +126,17 @@ dir=frontend or backend
 cd {dir}
 k apply -f .
 ```
+
+## 시연화면
+
+* Build View
+![build](./images/idp-01.jpg "Build View 페이지")
+
+* Build View Detail
+![build](./images/idp-02.jpg "Build View Detail 페이지")
+
+* Deploy View
+![deploy](./images/idp-03.jpg "Deploy View 페이지")
+
+* Deploy View Detail
+![deploy](./images/idp-04.jpg "Deploy View Detail 페이지")
