@@ -122,3 +122,7 @@ spec:
    python run_recommender.py --namespace your-namespaces --record true
    ```
 
+## 시연화면
+
+* result
+![image](./images/k8s-resource.jpg "측정결과")
