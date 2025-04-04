@@ -6,6 +6,27 @@ Kubernetes Resource Optimizer는 Kubernetes 클러스터에서 리소스를 효�
 * 쿠버네티스 구성(쿠버네티스에 배포 시)
 * 프로메테우스 구성
 
+## 목표
+### 구현
+* 메트릭(Metric) 측정
+  * 네임스페이스(Namespace) 단위 컨테이너 측정
+  * 복수의 네임스페이스(Namespace) 측정
+  * 레코딩 룰(recording rule) 메트릭을 통한 측정
+* 알림(Notification)
+  * 슬랙(Slack) 알림 전송
+    * 현재 사용량/추천 사용량 전송
+
+### 미구현
+* Request/Limit 설정값 확인
+  * 측정된 애플리케이션 매니페스트에 설정된 request/limit값 수집 후 함께 알림
+* 추천값을 통한 설정 여부 확인
+  * 측정된 추천값을 설정한 컨테이너 제외
+  * Admission Controller를 통해 관리와 분류를 위한 label 추가
+* 슬랙(Slack)알림 세분화
+  * 설정된 Owner값에 따라 다른 채널/DM 으로 알림 전송
+
+
+
 ## 컨테이너 환경 설정
 
 ### Docker 빌드
