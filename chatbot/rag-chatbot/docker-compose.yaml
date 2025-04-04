@@ -1,0 +1,12 @@
+services:
+  chatbot:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./vector:/app/data
+    ports:
+      - "20000:5000"
+    environment:
+      OPENAI_API_KEY: 1a2b3c
